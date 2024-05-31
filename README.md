@@ -1,5 +1,21 @@
 # DSA To-Do-List
 
+Linux run
+
+```bash
+gradle build
+
+./gradlew run --console=plain
+```
+
+windows run
+
+```bash
+gradle build
+
+./gradlew.bat run --console=plain
+```
+
 ## Objectives List
 
 ### 1. Data Structures Implementation
@@ -28,7 +44,6 @@
 - [ ] Provide options to filter tasks by due date, priority, and category.
 
 ## Implementation Plan
-
 
 ### 1. Design Application Architecture
 
