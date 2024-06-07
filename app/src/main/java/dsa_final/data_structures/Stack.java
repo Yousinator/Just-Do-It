@@ -1,7 +1,5 @@
 package dsa_final.data_structures;
 
-import dsa_final.todo.Task;
-
 public class Stack {
     private LinkedList stackList;
     private Node top;
@@ -19,13 +17,14 @@ public class Stack {
         top = stackList.getHead();
     }
 
-    public void pop() {
+    public Node pop() {
         if (isEmpty()) {
             throw new IllegalStateException("Cannot pop from an empty stack.");
         }
-
+        Node currentTop = this.top;
         stackList.removeFirst();
         top = stackList.getHead();
+        return currentTop;
     }
 
     public boolean isEmpty() {

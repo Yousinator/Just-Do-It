@@ -74,7 +74,6 @@ public class TodoApp {
         return false;
     }
 
-    // Method to mark a task as complete by its name
     public void markCompleteByName(String name) {
         if (name == null || name.trim().isEmpty()) {
             throw new IllegalArgumentException("Task name cannot be null or empty.");
@@ -85,12 +84,41 @@ public class TodoApp {
             if (current.getTask().getName().equals(name)) {
                 this.todoList.removeTaskFromList(current.getTask());
                 completedTasks.enqueue(new Node(current.getTask()));
+
+                // Remove from urgent tasks if it exists there
+                removeFromUrgentTasksByName(name);
                 return;
             }
             current = current.getNext();
         }
 
         throw new IllegalArgumentException("Task not found in the list.");
+    }
+
+    // Method to remove a task by name from the urgent stack
+    private void removeFromUrgentTasksByName(String name) {
+        Stack tempStack = new Stack();
+        boolean found = false;
+
+        // Pop all elements until the target is found or the stack is empty
+        while (!urgentTasks.isEmpty()) {
+            Node node = urgentTasks.pop();
+            if (node.getTask().getName().equals(name)) {
+                found = true;
+                break;
+            } else {
+                tempStack.push(node);
+            }
+        }
+
+        // Push back all elements from the temp stack to the original stack
+        while (!tempStack.isEmpty()) {
+            urgentTasks.push(tempStack.pop());
+        }
+
+        if (!found) {
+            throw new IllegalArgumentException("Task not found in the urgent tasks stack.");
+        }
     }
 
     public void groupByCategory() {
