@@ -3,7 +3,7 @@
 Just-Do-It is a task management application designed to help you organize and manage your tasks efficiently. This application leverages fundamental data structures to provide a robust and scalable task management system.
 
 ## Table of Contents
-
+- [Class Diagram](#class-diagram)
 - [Features](#features)
   - [Efficient Task Management](#efficient-task-management)
   - [User Interface](#user-interface)
@@ -18,6 +18,11 @@ Just-Do-It is a task management application designed to help you organize and ma
   - [Node as a Building Block](#node-as-a-building-block)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Class Diagram
+
+![Screenshot_69](https://github.com/Yousinator/Just-Do-It/assets/113384687/67f5289b-4e54-41ee-b0e3-7645acb3f4b5)
+
 
 ## Features
 
