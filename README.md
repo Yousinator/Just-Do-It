@@ -1,4 +1,6 @@
 # Just-Do-It
+> [!Warning]
+> Repo archived as it has reached its final development phase, if you are interested in the project make sure to contact me anytime.
 
 Just-Do-It is a task management application designed to help you organize and manage your tasks efficiently. This application leverages fundamental data structures to provide a robust and scalable task management system.
 
@@ -112,13 +114,8 @@ gradle build
 
 ## Contributing
 
-We welcome contributions to improve Just-Do-It. Please follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch (git checkout -b feature-branch).
-3. Commit your changes (git commit -m 'Add some feature').
-4. Push to the branch (git push origin feature-branch).
-5. Create a new Pull Request.
+> [!Warning]
+> Repo archived as it has reached its final development phase, if you are interested in the project make sure to contact me anytime.
 
 ## License
 
